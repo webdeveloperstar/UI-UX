@@ -1,0 +1,151 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    
+}
+
+#main{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    
+}
+
+#left{
+    width: 40%;
+    height: 100%;
+    position: relative;
+    background-image: url(coffeel.jpg);
+    background-size: cover;
+    background-position: center;
+    
+    
+}
+
+#lnav{
+    width: 100%;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#lnavr{
+    display: flex;
+    align-items: center;
+}
+
+#lnavr a{
+      margin-right: 20px;
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+}
+
+#lnavr i{
+    color: royalblue;
+}
+
+#left #textcenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#textcenter h1{
+    font-size: 100px;
+    font-weight: 900;
+    text-shadow: 5px 5px 10px rgb(189, 136, 136);
+    transform: skew(20deg);
+}
+
+#textcenter p{
+    font-size: 15px;
+    line-height: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+#textcenter a{
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+    font-weight: 600;
+}
+
+#right{
+    width: 60%;
+    height: 100%;
+    
+}
+
+
+#rtop{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    background-color: #774123;
+}
+
+#rbottom{
+    width: 100%;
+    height: 50%;
+    background-image: url(bothwomen.avif);
+    background-size: cover;
+    background-position: center;
+}
+
+   
+#rtopleft{
+    width: 55%;
+    height: 100%;
+    background-color: #301B11;
+    background-image: url(coffee.png);
+    background-size: cover;
+   animation: move 2s infinite alternate;
+}
+
+@keyframes move {
+    to{
+        box-shadow: 5px 5px 10px red;
+    }
+
+    from{
+        box-shadow: 4px 6px 10px orange;
+        border-radius: 20%;
+        transform: rotate(20deg);
+    }
+}
+
+
+#rtopright{
+    width: 45%;
+    height: 100%;
+    background-color: green;
+    background-image: url(coffgirl.avif);
+    background-size: cover;
+    background-position: center;
+}
+
+@media(max-width: 500px){
+    #main{
+        flex-direction: column;
+    }
+
+    #left{
+        width: 100%;
+    }
+
+    #right{
+        width: 100%;
+    }
+}
